@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jericrealubit.github.io/goodlist/sitemap.xml

@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Goodlist: задачи и будильники</title>
+<meta name="description" content="Напоминания о лекарствах, задачи и будильники, которые звонят до вашего ответа.">
+<meta name="robots" content="index, follow">
+<link rel="icon" type="image/png" href="/goodlist/assets/favicon.png">
+<link rel="canonical" href="https://jericrealubit.github.io/goodlist/ru/">
+<link rel="alternate" hreflang="en" href="https://jericrealubit.github.io/goodlist/">
+<link rel="alternate" hreflang="zh-Hans" href="https://jericrealubit.github.io/goodlist/zh-hans/">
+<link rel="alternate" hreflang="hi" href="https://jericrealubit.github.io/goodlist/hi/">
+<link rel="alternate" hreflang="es" href="https://jericrealubit.github.io/goodlist/es/">
+<link rel="alternate" hreflang="ar" href="https://jericrealubit.github.io/goodlist/ar/">
+<link rel="alternate" hreflang="fr" href="https://jericrealubit.github.io/goodlist/fr/">
+<link rel="alternate" hreflang="pt-BR" href="https://jericrealubit.github.io/goodlist/pt-br/">
+<link rel="alternate" hreflang="ru" href="https://jericrealubit.github.io/goodlist/ru/">
+<link rel="alternate" hreflang="id" href="https://jericrealubit.github.io/goodlist/id/">
+<link rel="alternate" hreflang="de" href="https://jericrealubit.github.io/goodlist/de/">
+<link rel="alternate" hreflang="ja" href="https://jericrealubit.github.io/goodlist/ja/">
+<link rel="alternate" hreflang="fil" href="https://jericrealubit.github.io/goodlist/fil/">
+<link rel="alternate" hreflang="x-default" href="https://jericrealubit.github.io/goodlist/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Goodlist">
+<meta property="og:title" content="Goodlist: задачи и будильники">
+<meta property="og:description" content="Напоминания о лекарствах, задачи и будильники, которые звонят до вашего ответа.">
+<meta property="og:url" content="https://jericrealubit.github.io/goodlist/ru/">
+<meta property="og:image" content="https://jericrealubit.github.io/goodlist/assets/og-image.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="500">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="hi_IN">
+<meta property="og:locale:alternate" content="es_LA">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="id_ID">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="tl_PH">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Goodlist","alternateName":"Goodlist: задачи и будильники","description":"Напоминания о лекарствах, задачи и будильники, которые звонят до вашего ответа.","url":"https://jericrealubit.github.io/goodlist/ru/","inLanguage":"ru","operatingSystem":"Android","applicationCategory":"ProductivityApplication","downloadUrl":"https://play.google.com/store/apps/details?id=com.goodlist.app&hl=ru_RU","image":"https://jericrealubit.github.io/goodlist/assets/og-image.png","screenshot":["https://jericrealubit.github.io/goodlist/play-store/listings/ru-RU/images/phoneScreenshots/01-todo-list.png","https://jericrealubit.github.io/goodlist/play-store/listings/ru-RU/images/phoneScreenshots/02-alarms.png","https://jericrealubit.github.io/goodlist/play-store/listings/ru-RU/images/phoneScreenshots/03-medicines.png","https://jericrealubit.github.io/goodlist/play-store/listings/ru-RU/images/phoneScreenshots/04-voice.png","https://jericrealubit.github.io/goodlist/play-store/listings/ru-RU/images/phoneScreenshots/05-calendar.png","https://jericrealubit.github.io/goodlist/play-store/listings/ru-RU/images/phoneScreenshots/06-repeating-tasks.png","https://jericrealubit.github.io/goodlist/play-store/listings/ru-RU/images/phoneScreenshots/07-groups.png","https://jericrealubit.github.io/goodlist/play-store/listings/ru-RU/images/phoneScreenshots/08-themes.png"],"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #fbfbfa;
+    --surface: #ffffff;
+    --sunk: #f1f3f6;
+    --text: #14181f;
+    --muted: #5b6472;
+    --border: #e2e5ea;
+    --brand: #072655;
+    --brand-ink: #072655;
+    --accent: #2e9e4f;
+    --danger: #b23a2c;
+    --danger-bg: #fdf3f1;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0b0f17;
+      --surface: #111826;
+      --sunk: #0e1420;
+      --text: #e7e9ed;
+      --muted: #9aa3b2;
+      --border: #262b36;
+      --brand: #5c8ae6;
+      --brand-ink: #e7e9ed;
+      --accent: #4cb86b;
+      --danger: #e4685d;
+      --danger-bg: #21150f;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--brand); }
+  a:focus-visible, summary:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 3px;
+  }
+
+  header.top {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: color-mix(in srgb, var(--bg) 92%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+  }
+  .top-inner {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-inline-end: auto;
+    text-decoration: none;
+    color: inherit;
+  }
+  .mark {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    background: #072655;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+  }
+  .mark svg { width: 17px; height: 17px; }
+  .brand b { font-size: 15px; letter-spacing: -0.01em; }
+  nav.docs { display: flex; gap: 4px; flex-wrap: wrap; }
+  nav.docs a {
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--muted);
+    padding: 6px 12px;
+    border-radius: 999px;
+  }
+  nav.docs a:hover { color: var(--text); background: var(--sunk); }
+  nav.docs a[aria-current="page"] { color: var(--brand-ink); background: var(--sunk); }
+
+  main { max-width: 940px; margin: 0 auto; padding: 40px 20px 80px; }
+
+  .hero { margin-bottom: 36px; }
+  .hero h1 {
+    font-size: clamp(28px, 5vw, 36px);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin: 0 0 8px;
+  }
+  .hero p { margin: 0 0 14px; color: var(--muted); max-width: 60ch; }
+  .stamp {
+    display: inline-block;
+    font-size: 13px;
+    color: var(--muted);
+    background: var(--sunk);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 4px 12px;
+  }
+  .stamp b { color: var(--text); }
+
+  .layout { display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: 44px; align-items: start; }
+
+  .toc { position: sticky; top: 76px; display: flex; flex-direction: column; }
+  .toc-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+  .toc a {
+    font-size: 13.5px;
+    line-height: 1.4;
+    color: var(--muted);
+    text-decoration: none;
+    padding: 5px 0 5px 12px;
+    border-left: 2px solid var(--border);
+  }
+  .toc a:hover { color: var(--text); border-left-color: var(--accent); }
+  /* After the .toc rules above, not before them: at equal specificity the
+     later declaration wins, so hoisting this to the .layout block left the
+     sidebar visible on phones. */
+  @media (max-width: 760px) {
+    .layout { grid-template-columns: 1fr; gap: 0; }
+    .toc { display: none; }
+  }
+
+  article { max-width: 68ch; }
+  section { scroll-margin-top: 84px; }
+  section + section { margin-top: 40px; padding-top: 32px; border-top: 1px solid var(--border); }
+  h2 { font-size: 20px; letter-spacing: -0.01em; margin: 0 0 10px; }
+  h2 .num { color: var(--muted); font-weight: 500; margin-right: 8px; }
+  p { margin: 12px 0; }
+  p.lead { color: var(--muted); font-size: 15px; }
+  ul { margin: 12px 0; padding-inline-start: 22px; }
+  li { margin: 6px 0; }
+  strong { font-weight: 650; }
+
+  .callout {
+    margin: 16px 0;
+    padding: 14px 16px;
+    font-size: 15px;
+    background: var(--sunk);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--brand);
+    border-radius: 10px;
+  }
+  .callout.warn { background: var(--danger-bg); border-left-color: var(--danger); }
+
+  .cards { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin-top: 28px; }
+  .card {
+    display: block;
+    padding: 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    text-decoration: none;
+    color: inherit;
+  }
+  .card:hover { border-color: var(--accent); }
+  .card b { display: block; font-size: 16px; margin-bottom: 6px; }
+  .card span { color: var(--muted); font-size: 14px; }
+
+  footer {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 24px 20px 60px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  .landing .hero { margin-bottom: 28px; }
+  .landing .hero h1 { max-width: 22ch; }
+  .hero-lede { font-size: 18px; line-height: 1.5; max-width: 52ch; }
+  .landing .hero p.hero-lede { color: var(--text); }
+  .cta { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 22px; margin: 22px 0 12px; }
+  .play-badge { display: inline-block; line-height: 0; border-radius: 10px; }
+  .play-badge img { height: 60px; width: auto; }
+  .play-button {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 12px;
+    background: #000;
+    color: #fff;
+    font-weight: 650;
+    text-decoration: none;
+  }
+  .play-button:hover { background: #222; }
+  .web-link { font-weight: 600; }
+  .landing .hero p.note { font-size: 14px; max-width: 62ch; }
+
+  .shots {
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    list-style: none;
+    margin: 0;
+    padding: 4px 2px 16px;
+  }
+  .shots li { flex: 0 0 auto; margin: 0; scroll-snap-align: start; }
+  .shots img {
+    display: block;
+    width: 200px;
+    height: auto;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    background: var(--sunk);
+  }
+  @media (min-width: 760px) { .shots img { width: 216px; } }
+
+  .landing section > p, .landing section > details { max-width: 70ch; }
+  .features { columns: 2 300px; column-gap: 36px; }
+  .features li { break-inside: avoid; }
+  details.faq { border-bottom: 1px solid var(--border); padding: 12px 0; }
+  details.faq summary { cursor: pointer; font-weight: 650; }
+  details.faq p { margin: 8px 0 4px; color: var(--muted); }
+
+  .langs ul { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; }
+  .langs li { margin: 0; }
+  .langs a {
+    display: inline-block;
+    padding: 6px 14px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    font-size: 14px;
+    text-decoration: none;
+  }
+  .langs a:hover { border-color: var(--accent); }
+  .langs a[aria-current="page"] { background: var(--sunk); color: var(--text); }
+  footer p { margin: 6px 0 0; font-size: 12px; }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-inner">
+    <a class="brand" href="/goodlist/ru/">
+      <span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" fill="#fff" fill-opacity=".14"/><path d="M7 12.5l3 3 7-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <b>Goodlist</b>
+    </a>
+    <nav class="docs" aria-label="Main">
+        <a href="/goodlist/guide/">Руководство</a>
+        <a href="/goodlist/legal/privacy/">Конфиденциальность</a>
+        <a href="/goodlist/legal/terms/">Условия</a>
+        <a href="/goodlist/legal/delete-account/">Удалить аккаунт</a>
+    </nav>
+  </div>
+</header>
+<main class="landing">
+  <div class="hero">
+    <h1>Goodlist: задачи и будильники</h1>
+    <p class="hero-lede">Напоминания о лекарствах, задачи и будильники, которые звонят до вашего ответа.</p>
+    <div class="cta">
+      <a class="play-button" href="https://play.google.com/store/apps/details?id=com.goodlist.app&amp;hl=ru_RU&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dlanding%26utm_campaign%3Dru_landing">Доступно в Google Play</a>
+      <a class="web-link" href="https://goodlist.expo.app">Открыть в браузере</a>
+    </div>
+    <p class="note">Для телефонов на Android. На iPhone или компьютере пользуйтесь веб-версией на goodlist.expo.app с тем же аккаунтом. Будильникам и напоминаниям нужно приложение для Android.</p>
+  </div>
+
+  <section aria-labelledby="screenshots">
+    <h2 id="screenshots">Скриншоты</h2>
+    <ul class="shots">
+      <li><img src="/goodlist/play-store/listings/ru-RU/images/phoneScreenshots/01-todo-list.png" alt="Ваши дела — это просто. Добавьте задачу за секунды. Проведите вправо, когда готово." width="1080" height="1920" decoding="async"></li>
+      <li><img src="/goodlist/play-store/listings/ru-RU/images/phoneScreenshots/02-alarms.png" alt="Звонит, пока вы не ответите. Выключите, отложите или отметьте задачу выполненной." width="1080" height="1920" decoding="async"></li>
+      <li><img src="/goodlist/play-store/listings/ru-RU/images/phoneScreenshots/03-medicines.png" alt="Ни одной пропущенной дозы. Напоминание о каждой дозе. Одно нажатие — и она отмечена." width="1080" height="1920" loading="lazy" decoding="async"></li>
+      <li><img src="/goodlist/play-store/listings/ru-RU/images/phoneScreenshots/04-voice.png" alt="Просто скажите. Говорите на своём языке — и это станет задачей." width="1080" height="1920" loading="lazy" decoding="async"></li>
+      <li><img src="/goodlist/play-store/listings/ru-RU/images/phoneScreenshots/05-calendar.png" alt="Видно, что и когда. Точка на каждом занятом дне. Перенос задачи в два нажатия." width="1080" height="1920" loading="lazy" decoding="async"></li>
+      <li><img src="/goodlist/play-store/listings/ru-RU/images/phoneScreenshots/06-repeating-tasks.png" alt="Создайте раз — она повторится. Каждый день, неделю или месяц — или в выбранные дни." width="1080" height="1920" loading="lazy" decoding="async"></li>
+      <li><img src="/goodlist/play-store/listings/ru-RU/images/phoneScreenshots/07-groups.png" alt="Делитесь задачами с семьёй или командой. Пригласите по коду. В каждом запросе видно, кто попросил." width="1080" height="1920" loading="lazy" decoding="async"></li>
+      <li><img src="/goodlist/play-store/listings/ru-RU/images/phoneScreenshots/08-themes.png" alt="Сделайте под себя. 32 темы, у каждой свой анимированный талисман." width="1080" height="1920" loading="lazy" decoding="async"></li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="about">
+    <h2 id="about">Что умеет</h2>
+    <p>Goodlist — личный список дел с будильниками, которые звонят, пока вы не ответите, и напоминаниями о лекарствах, чтобы не пропустить приём. Он прост с первого дня, растёт вместе с вами и говорит на 12 языках.</p>
+    <p>Зарегистрируйтесь и добавляйте задачи за секунды — без группы и настроек. Каждая новая задача по умолчанию видна только вам.</p>
+    <p>Напишите задачу или нажмите на микрофон и произнесите её на своём языке — сказанное станет текстом задачи. Вы видите текст до сохранения, а голос никогда не записывается: телефон сам превращает речь в текст, и Goodlist получает только текст. На английском понимаются и даты, и команды вроде «remind me tomorrow».</p>
+    <p>Укажите дату — и задача появится в календаре. Включите будильник: телефон зазвонит точно в срок и будет звонить, пока вы не нажмёте «Выключить», «Отложить» или «Готово».</p>
+    <p>Добавьте лекарство — и Goodlist напомнит о каждом приёме, пока вы не ответите. Если нужно, задайте разное время по дням: например, 4:10 в будни и 9:00 в выходные. Отмечайте каждый приём как принятый или пропущенный одним касанием и следите за статистикой недели. Это напоминание и дневник, а не медицинский совет.</p>
+    <p>Отличайте таблетку от дела, не глядя: напоминания о лекарствах и будильники задач звучат по-разному. Выберите звук для каждого в настройках — Писк, Перезвон, Звонок или Нарастающий — и сначала прослушайте.</p>
+    <p>Goodlist говорит на вашем языке: English, Español, Português, Français, Deutsch, Русский, العربية, हिन्दी, Bahasa Indonesia, Filipino, 日本語 и 简体中文. Он следует языку телефона, или выберите другой в настройках. На арабском каждый экран идёт справа налево.</p>
+    <p>Когда захотите, создайте группу или вступите в неё — «Семья» или «Команда» — по коду приглашения и просите друг друга о задачах: всегда видно, кто о чём попросил. С iPhone или компьютера можно присоединиться на goodlist.expo.app. Ваши личные задачи останутся как были.</p>
+  </section>
+
+  <section aria-labelledby="features">
+    <h2 id="features">ВОЗМОЖНОСТИ</h2>
+    <ul class="features">
+      <li>Личные задачи с заметками, сроками и календарём</li>
+      <li>Перенос задачи на другой день в два касания</li>
+      <li>Повторяющиеся задачи — каждый день, неделю, две недели, месяц или в выбранные дни</li>
+      <li>Будильник для любой задачи — точно в срок</li>
+      <li>Будильники звонят до ответа, а без ответа — снова каждые 5 минут</li>
+      <li>Выберите, на сколько откладывать: 5, 10, 15 или 30 минут</li>
+      <li>Разные звуки для лекарств и задач</li>
+      <li>Календарь предупредит, если настройка телефона помешает будильнику</li>
+      <li>Беззвучный режим — без звука на час, восемь часов, до утра или до выбранного времени</li>
+      <li>Напоминание о каждом приёме с кнопками «Принято» и «Отложить» прямо в уведомлении</li>
+      <li>Журнал всех приёмов и статистика недели</li>
+      <li>Поделитесь лекарством с группой, чтобы все видели расписание</li>
+      <li>32 темы — светлые, тёмные и яркие, у каждой свой анимированный талисман (3 — в Premium)</li>
+      <li>Работает офлайн и синхронизируется, когда вы снова в сети</li>
+      <li>История всех выполненных задач</li>
+      <li>Обновления в реальном времени на всех устройствах</li>
+      <li>Удалите аккаунт и все данные в любой момент прямо в настройках</li>
+      <li>Есть веб-версия на goodlist.expo.app с тем же аккаунтом (будильники и напоминания работают только на телефоне — браузер не может их запланировать)</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="pricing">
+    <h2 id="pricing">Цена и конфиденциальность</h2>
+    <p>Goodlist бесплатен. Необязательный Premium — ежемесячно, ежегодно или разовой покупкой «навсегда» — даёт вторую собственную группу, возможность поделиться лекарством с группой и больше 5 участников в группе (до 20). Когда вы впервые создаёте вторую группу или делитесь лекарством, начинается бесплатный 30-дневный пробный период, без карты. Можно также оставить чаевые в поддержку приложения: за это вы получите значок «Сторонник», но ничего не разблокируется.</p>
+    <p>Goodlist не показывает рекламу, не отслеживает вас в рекламных целях и не продаёт ваши данные. Подробности — в нашей Политике конфиденциальности (на английском).</p>
+  </section>
+
+  <section aria-labelledby="faq">
+    <h2 id="faq">Вопросы и ответы</h2>
+    <details class="faq">
+      <summary>Goodlist бесплатный?</summary>
+      <p>Да. Ваши задачи, будильники, напоминания о лекарствах и одна группа до 5 человек бесплатны и без рекламы. Premium необязателен: он добавляет вторую группу, возможность поделиться лекарством с группой и группы до 20 человек. Создание второй группы или первое лекарство, которым вы поделились, запускает бесплатный пробный период на 30 дней без карты.</p>
+    </details>
+    <details class="faq">
+      <summary>Есть ли приложение для iPhone?</summary>
+      <p>Пока нет. Родные и коллеги с iPhone или компьютером могут пользоваться Goodlist на goodlist.expo.app с тем же аккаунтом: вступать в вашу группу, видеть и отправлять задачи. Будильникам и напоминаниям о лекарствах нужно приложение для Android: браузер не умеет их планировать.</p>
+    </details>
+    <details class="faq">
+      <summary>Что делать, если будильник не звонит?</summary>
+      <p>Проверьте в Настройках, что Беззвучный режим выключен. Затем откройте Календарь: если какая-то настройка телефона мешает будильникам, вверху появится сообщение с кнопкой, чтобы это исправить. Goodlist нужно разрешение на уведомления, а на Android — включённый параметр «Будильники и напоминания». Некоторые телефоны также останавливают фоновые приложения ради экономии батареи; если ваш так делает, разрешите Goodlist работать без ограничений батареи.</p>
+    </details>
+    <details class="faq">
+      <summary>Как делиться задачами с семьёй?</summary>
+      <p>Создайте группу, Семья или Команда, на вкладке Группа и нажмите Поделиться на её карточке, чтобы отправить приглашение. Когда родные вступят, вы сможете отправлять друг другу Запросы — с именем того, кто попросил. Ваши личные задачи остаются личными.</p>
+    </details>
+    <details class="faq">
+      <summary>Что происходит с моими данными?</summary>
+      <p>Goodlist не показывает рекламу, не отслеживает вас в рекламных целях и не продаёт ваши данные. Вы можете удалить аккаунт и все свои данные в любой момент прямо в Настройках. Подробности — в Политике конфиденциальности (на английском).</p>
+    </details>
+  </section>
+
+  <section aria-labelledby="help">
+    <h2 id="help">Помощь и правовая информация</h2>
+    <div class="cards">
+      <a class="card" href="/goodlist/guide/"><b>Как пользоваться Goodlist</b><span>Пошаговое руководство с картинкой к каждому шагу (на английском).</span></a>
+      <a class="card" href="/goodlist/legal/"><b>Правовая информация и конфиденциальность</b><span>Политика конфиденциальности, условия использования и удаление аккаунта (на английском).</span></a>
+    </div>
+  </section>
+
+  <section class="langs" aria-labelledby="languages">
+    <h2 id="languages">Языки</h2>
+    <ul>
+      <li><a href="/goodlist/" hreflang="en" lang="en">English</a></li>
+      <li><a href="/goodlist/zh-hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></li>
+      <li><a href="/goodlist/hi/" hreflang="hi" lang="hi">हिन्दी</a></li>
+      <li><a href="/goodlist/es/" hreflang="es" lang="es">Español</a></li>
+      <li><a href="/goodlist/ar/" hreflang="ar" lang="ar">العربية</a></li>
+      <li><a href="/goodlist/fr/" hreflang="fr" lang="fr">Français</a></li>
+      <li><a href="/goodlist/pt-br/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a></li>
+      <li><a href="/goodlist/ru/" hreflang="ru" lang="ru" aria-current="page">Русский</a></li>
+      <li><a href="/goodlist/id/" hreflang="id" lang="id">Bahasa Indonesia</a></li>
+      <li><a href="/goodlist/de/" hreflang="de" lang="de">Deutsch</a></li>
+      <li><a href="/goodlist/ja/" hreflang="ja" lang="ja">日本語</a></li>
+      <li><a href="/goodlist/fil/" hreflang="fil" lang="fil">Filipino</a></li>
+    </ul>
+  </section>
+</main>
+<footer>
+  Goodlist — вопросы? <a href="mailto:jericrealubit@gmail.com">jericrealubit@gmail.com</a>
+  <p lang="en">Google Play is a trademark of Google LLC.</p>
+</footer>
+</body>
+</html>

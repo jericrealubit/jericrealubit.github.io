@@ -3,9 +3,46 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Goodlist · Goodlist</title>
-<meta name="description" content="A better place for your everyday tasks. User guide, privacy policy and terms for the Goodlist task app.">
+<title>Goodlist: To-Do, Alarms &amp; Meds</title>
+<meta name="description" content="Personal tasks, alarms that ring until answered, and medicine reminders.">
 <meta name="robots" content="index, follow">
+<link rel="icon" type="image/png" href="/goodlist/assets/favicon.png">
+<link rel="canonical" href="https://jericrealubit.github.io/goodlist/">
+<link rel="alternate" hreflang="en" href="https://jericrealubit.github.io/goodlist/">
+<link rel="alternate" hreflang="zh-Hans" href="https://jericrealubit.github.io/goodlist/zh-hans/">
+<link rel="alternate" hreflang="hi" href="https://jericrealubit.github.io/goodlist/hi/">
+<link rel="alternate" hreflang="es" href="https://jericrealubit.github.io/goodlist/es/">
+<link rel="alternate" hreflang="ar" href="https://jericrealubit.github.io/goodlist/ar/">
+<link rel="alternate" hreflang="fr" href="https://jericrealubit.github.io/goodlist/fr/">
+<link rel="alternate" hreflang="pt-BR" href="https://jericrealubit.github.io/goodlist/pt-br/">
+<link rel="alternate" hreflang="ru" href="https://jericrealubit.github.io/goodlist/ru/">
+<link rel="alternate" hreflang="id" href="https://jericrealubit.github.io/goodlist/id/">
+<link rel="alternate" hreflang="de" href="https://jericrealubit.github.io/goodlist/de/">
+<link rel="alternate" hreflang="ja" href="https://jericrealubit.github.io/goodlist/ja/">
+<link rel="alternate" hreflang="fil" href="https://jericrealubit.github.io/goodlist/fil/">
+<link rel="alternate" hreflang="x-default" href="https://jericrealubit.github.io/goodlist/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Goodlist">
+<meta property="og:title" content="Goodlist: To-Do, Alarms &amp; Meds">
+<meta property="og:description" content="Personal tasks, alarms that ring until answered, and medicine reminders.">
+<meta property="og:url" content="https://jericrealubit.github.io/goodlist/">
+<meta property="og:image" content="https://jericrealubit.github.io/goodlist/assets/og-image.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="500">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="hi_IN">
+<meta property="og:locale:alternate" content="es_LA">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="id_ID">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="tl_PH">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Goodlist","alternateName":"Goodlist: To-Do, Alarms & Meds","description":"Personal tasks, alarms that ring until answered, and medicine reminders.","url":"https://jericrealubit.github.io/goodlist/","inLanguage":"en","operatingSystem":"Android","applicationCategory":"ProductivityApplication","downloadUrl":"https://play.google.com/store/apps/details?id=com.goodlist.app&hl=en_US","image":"https://jericrealubit.github.io/goodlist/assets/og-image.png","screenshot":["https://jericrealubit.github.io/goodlist/play-store/screenshots/01-todo-list.png","https://jericrealubit.github.io/goodlist/play-store/screenshots/02-alarms.png","https://jericrealubit.github.io/goodlist/play-store/screenshots/03-medicines.png","https://jericrealubit.github.io/goodlist/play-store/screenshots/04-voice.png","https://jericrealubit.github.io/goodlist/play-store/screenshots/05-calendar.png","https://jericrealubit.github.io/goodlist/play-store/screenshots/06-repeating-tasks.png","https://jericrealubit.github.io/goodlist/play-store/screenshots/07-groups.png","https://jericrealubit.github.io/goodlist/play-store/screenshots/08-themes.png"],"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
 <style>
   :root {
     color-scheme: light dark;
@@ -73,7 +110,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-right: auto;
+    margin-inline-end: auto;
     text-decoration: none;
     color: inherit;
   }
@@ -156,7 +193,7 @@
   h2 .num { color: var(--muted); font-weight: 500; margin-right: 8px; }
   p { margin: 12px 0; }
   p.lead { color: var(--muted); font-size: 15px; }
-  ul { margin: 12px 0; padding-left: 22px; }
+  ul { margin: 12px 0; padding-inline-start: 22px; }
   li { margin: 6px 0; }
   strong { font-weight: 650; }
 
@@ -194,7 +231,66 @@
     font-size: 14px;
   }
 
-  .hero-lede { font-size: 17px; max-width: 54ch; }
+  .landing .hero { margin-bottom: 28px; }
+  .landing .hero h1 { max-width: 22ch; }
+  .hero-lede { font-size: 18px; line-height: 1.5; max-width: 52ch; }
+  .landing .hero p.hero-lede { color: var(--text); }
+  .cta { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 22px; margin: 22px 0 12px; }
+  .play-badge { display: inline-block; line-height: 0; border-radius: 10px; }
+  .play-badge img { height: 60px; width: auto; }
+  .play-button {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 12px;
+    background: #000;
+    color: #fff;
+    font-weight: 650;
+    text-decoration: none;
+  }
+  .play-button:hover { background: #222; }
+  .web-link { font-weight: 600; }
+  .landing .hero p.note { font-size: 14px; max-width: 62ch; }
+
+  .shots {
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    list-style: none;
+    margin: 0;
+    padding: 4px 2px 16px;
+  }
+  .shots li { flex: 0 0 auto; margin: 0; scroll-snap-align: start; }
+  .shots img {
+    display: block;
+    width: 200px;
+    height: auto;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    background: var(--sunk);
+  }
+  @media (min-width: 760px) { .shots img { width: 216px; } }
+
+  .landing section > p, .landing section > details { max-width: 70ch; }
+  .features { columns: 2 300px; column-gap: 36px; }
+  .features li { break-inside: avoid; }
+  details.faq { border-bottom: 1px solid var(--border); padding: 12px 0; }
+  details.faq summary { cursor: pointer; font-weight: 650; }
+  details.faq p { margin: 8px 0 4px; color: var(--muted); }
+
+  .langs ul { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; }
+  .langs li { margin: 0; }
+  .langs a {
+    display: inline-block;
+    padding: 6px 14px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    font-size: 14px;
+    text-decoration: none;
+  }
+  .langs a:hover { border-color: var(--accent); }
+  .langs a[aria-current="page"] { background: var(--sunk); color: var(--text); }
+  footer p { margin: 6px 0 0; font-size: 12px; }
 </style>
 </head>
 <body>
@@ -212,18 +308,126 @@
     </nav>
   </div>
 </header>
-<main>
+<main class="landing">
   <div class="hero">
-    <h1>Goodlist</h1>
-    <p class="hero-lede">A better place for your everyday tasks. Keep your own to-do list, and share tasks with a small family or team group.</p>
+    <h1>Goodlist: To-Do, Alarms &amp; Meds</h1>
+    <p class="hero-lede">Personal tasks, alarms that ring until answered, and medicine reminders.</p>
+    <div class="cta">
+      <a class="play-button" href="https://play.google.com/store/apps/details?id=com.goodlist.app&amp;hl=en_US&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dlanding%26utm_campaign%3Den_landing">Get it on Google Play</a>
+      <a class="web-link" href="https://goodlist.expo.app">Use it in your browser</a>
+    </div>
+    <p class="note">For Android phones. On an iPhone or a computer, use the web app at goodlist.expo.app with the same account. Alarms and reminders need the Android app.</p>
   </div>
-  <div class="cards">
-    <a class="card" href="/goodlist/guide/"><b>How to use Goodlist</b><span>A plain-language walkthrough with a picture for every step — from your first task on your own to sharing with a family or team.</span></a>
-    <a class="card" href="/goodlist/legal/"><b>Legal &amp; privacy</b><span>The privacy policy, terms of service, and how to delete your account — the same text shown inside the app.</span></a>
-  </div>
+
+  <section aria-labelledby="screenshots">
+    <h2 id="screenshots">Screenshots</h2>
+    <ul class="shots">
+      <li><img src="/goodlist/play-store/screenshots/01-todo-list.png" alt="Your to-dos, kept simple. Add a task in seconds. Swipe right when it’s done." width="1080" height="1920" decoding="async"></li>
+      <li><img src="/goodlist/play-store/screenshots/02-alarms.png" alt="Alarms that ring until you answer. Stop it, snooze it, or mark the task done." width="1080" height="1920" decoding="async"></li>
+      <li><img src="/goodlist/play-store/screenshots/03-medicines.png" alt="Never miss a dose. A reminder at every dose. One tap logs it as taken." width="1080" height="1920" loading="lazy" decoding="async"></li>
+      <li><img src="/goodlist/play-store/screenshots/04-voice.png" alt="Just say it. “Buy milk tomorrow” becomes a task, due tomorrow." width="1080" height="1920" loading="lazy" decoding="async"></li>
+      <li><img src="/goodlist/play-store/screenshots/05-calendar.png" alt="See what’s due, when. A dot on every busy day. Move a task in two taps." width="1080" height="1920" loading="lazy" decoding="async"></li>
+      <li><img src="/goodlist/play-store/screenshots/06-repeating-tasks.png" alt="Set it once, it repeats. Every day, week or month — or the days you choose." width="1080" height="1920" loading="lazy" decoding="async"></li>
+      <li><img src="/goodlist/play-store/screenshots/07-groups.png" alt="Share tasks with family or team. Invite them with a code. Every request shows who asked." width="1080" height="1920" loading="lazy" decoding="async"></li>
+      <li><img src="/goodlist/play-store/screenshots/08-themes.png" alt="Make it yours. 32 themes, each with its own animated mascot." width="1080" height="1920" loading="lazy" decoding="async"></li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="about">
+    <h2 id="about">What it does</h2>
+    <p>Goodlist is a personal to-do list with alarms that ring until you answer them and medicine reminders you won't miss. It starts simple, grows with you, and speaks 12 languages.</p>
+    <p>Sign up and start adding tasks in seconds — no group, no setup. Every task you create is private to you by default.</p>
+    <p>Type a task, or tap the microphone and just say it: &quot;Buy milk tomorrow&quot; becomes a task, due tomorrow. You see the words it heard before anything is saved, and nothing is ever recorded — your phone turns speech into text, and Goodlist only receives the text.</p>
+    <p>Give a task a day and it turns up on the calendar. Turn on its alarm and your phone rings at the exact time — and keeps ringing until you tap Stop, Snooze or Done. Say &quot;remind me to call the vet at 5pm&quot; and the alarm is already on.</p>
+    <p>Add a medicine and Goodlist reminds you at every dose, until you answer it. Give it different times on different days if you need to — say 4:10 on weekdays and 9:00 at weekends. Mark each dose taken or skipped with one tap, and see the week's adherence at a glance. It's a reminder and a record, not medical advice.</p>
+    <p>Tell a pill from a chore without looking: medicine reminders and task alarms ring with different sounds. Pick each one in Settings — Beeps, Chime, Bell or Rising — and hear a preview first.</p>
+    <p>Goodlist speaks your language: English, Español, Português, Français, Deutsch, Русский, العربية, हिन्दी, Bahasa Indonesia, Filipino, 日本語 and 简体中文. It follows your phone, or you can pick one in Settings. Arabic lays out every screen right to left.</p>
+    <p>When you're ready, create or join a group — Family or Team — with an invite code, and send each other Requested tasks with your name on them, so it's always clear who asked for what. Family on an iPhone or a computer can join at goodlist.expo.app. Your personal tasks stay exactly as they were.</p>
+  </section>
+
+  <section aria-labelledby="features">
+    <h2 id="features">FEATURES</h2>
+    <ul class="features">
+      <li>Personal tasks with notes, due dates and a calendar view</li>
+      <li>Move a task to another day with two taps</li>
+      <li>Repeating tasks — every day, week, two weeks, month, or the days you choose</li>
+      <li>An optional alarm on any task, right at its due time</li>
+      <li>Alarms ring until you answer them, and again every 5 minutes if you don't</li>
+      <li>Choose how long Snooze waits: 5, 10, 15 or 30 minutes</li>
+      <li>Different sounds for medicines and tasks</li>
+      <li>The calendar warns you if a phone setting would stop an alarm ringing</li>
+      <li>Silent mode — mute alarms for an hour, eight hours, until morning, or a time you pick</li>
+      <li>A reminder at every medicine dose, with Taken and Snooze on the notification</li>
+      <li>A log of every dose, and your week's adherence</li>
+      <li>Share a medicine with your group so they can see its schedule too</li>
+      <li>32 themes — light, dark or vivid — each with its own animated mascot (3 with Premium)</li>
+      <li>Works offline, and syncs when you're back online</li>
+      <li>A history of everything you've completed</li>
+      <li>Live updates across your devices</li>
+      <li>Delete your account and all of your data at any time, right from Settings</li>
+      <li>Also on the web at goodlist.expo.app, with the same account (alarms and medicine reminders are phone-only — a browser can't schedule them)</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="pricing">
+    <h2 id="pricing">Price and privacy</h2>
+    <p>Goodlist is free. Optional Premium — monthly, yearly or a one-time Lifetime purchase — lets you own a second group, share a medicine with one, or grow a group past 5 members (up to 20). Creating a second group or sharing a medicine for the first time starts a 30-day free trial, no card needed. You can also leave a tip to support the app; it earns you a Supporter badge but unlocks nothing.</p>
+    <p>Goodlist doesn't show ads, doesn't track you for advertising, and doesn't sell your data. See our Privacy Policy for the specifics.</p>
+  </section>
+
+  <section aria-labelledby="faq">
+    <h2 id="faq">Questions</h2>
+    <details class="faq">
+      <summary>Is Goodlist free?</summary>
+      <p>Yes. Your own tasks, alarms, medicine reminders and one group of up to 5 people are free, with no ads. Premium is optional: it adds a second group, sharing a medicine with your group, and groups of up to 20. Creating a second group or sharing a medicine for the first time starts a 30-day free trial, no card needed.</p>
+    </details>
+    <details class="faq">
+      <summary>Is there an iPhone app?</summary>
+      <p>Not yet. Family and teammates on an iPhone or a computer can use Goodlist at goodlist.expo.app with the same account: they can join your group, and see and send tasks. Alarms and medicine reminders need the Android app, because a browser can't schedule them.</p>
+    </details>
+    <details class="faq">
+      <summary>What if an alarm doesn’t ring?</summary>
+      <p>Check that Silent mode is off in Settings. Then open the Calendar: if a phone setting would stop alarms, a box at the top says so, with a button to fix it. Goodlist needs permission to send notifications, and Android’s “Alarms &amp; reminders” turned on. Some phones also stop apps in the background to save battery; if yours does, let Goodlist run without battery restrictions.</p>
+    </details>
+    <details class="faq">
+      <summary>How do I share tasks with my family?</summary>
+      <p>Create a group, Family or Team, in the Group tab, then tap Share on its card to send the invite. Once they’ve joined, you can send each other Requested tasks, each with the name of the person who asked. Your personal tasks stay private.</p>
+    </details>
+    <details class="faq">
+      <summary>What happens to my data?</summary>
+      <p>Goodlist doesn’t show ads, doesn’t track you for advertising, and doesn’t sell your data. You can delete your account and all of your data at any time, right from Settings. The privacy policy has the details.</p>
+    </details>
+  </section>
+
+  <section aria-labelledby="help">
+    <h2 id="help">Help and legal</h2>
+    <div class="cards">
+      <a class="card" href="/goodlist/guide/"><b>How to use Goodlist</b><span>A plain-language walkthrough with a picture for every step, from your first task to sharing with a family or team.</span></a>
+      <a class="card" href="/goodlist/legal/"><b>Legal &amp; privacy</b><span>The privacy policy, terms of service, and how to delete your account: the same text shown inside the app.</span></a>
+    </div>
+  </section>
+
+  <section class="langs" aria-labelledby="languages">
+    <h2 id="languages">Languages</h2>
+    <ul>
+      <li><a href="/goodlist/" hreflang="en" lang="en" aria-current="page">English</a></li>
+      <li><a href="/goodlist/zh-hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></li>
+      <li><a href="/goodlist/hi/" hreflang="hi" lang="hi">हिन्दी</a></li>
+      <li><a href="/goodlist/es/" hreflang="es" lang="es">Español</a></li>
+      <li><a href="/goodlist/ar/" hreflang="ar" lang="ar">العربية</a></li>
+      <li><a href="/goodlist/fr/" hreflang="fr" lang="fr">Français</a></li>
+      <li><a href="/goodlist/pt-br/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a></li>
+      <li><a href="/goodlist/ru/" hreflang="ru" lang="ru">Русский</a></li>
+      <li><a href="/goodlist/id/" hreflang="id" lang="id">Bahasa Indonesia</a></li>
+      <li><a href="/goodlist/de/" hreflang="de" lang="de">Deutsch</a></li>
+      <li><a href="/goodlist/ja/" hreflang="ja" lang="ja">日本語</a></li>
+      <li><a href="/goodlist/fil/" hreflang="fil" lang="fil">Filipino</a></li>
+    </ul>
+  </section>
 </main>
 <footer>
   Goodlist — questions? <a href="mailto:jericrealubit@gmail.com">jericrealubit@gmail.com</a>
+  <p lang="en">Google Play is a trademark of Google LLC.</p>
 </footer>
 </body>
 </html>

@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Goodlist：待办任务、闹钟和服药提醒</title>
+<meta name="description" content="服药提醒、待办清单、家庭任务共享，还有在你回应前一直响的闹钟。">
+<meta name="robots" content="index, follow">
+<link rel="icon" type="image/png" href="/goodlist/assets/favicon.png">
+<link rel="canonical" href="https://jericrealubit.github.io/goodlist/zh-hans/">
+<link rel="alternate" hreflang="en" href="https://jericrealubit.github.io/goodlist/">
+<link rel="alternate" hreflang="zh-Hans" href="https://jericrealubit.github.io/goodlist/zh-hans/">
+<link rel="alternate" hreflang="hi" href="https://jericrealubit.github.io/goodlist/hi/">
+<link rel="alternate" hreflang="es" href="https://jericrealubit.github.io/goodlist/es/">
+<link rel="alternate" hreflang="ar" href="https://jericrealubit.github.io/goodlist/ar/">
+<link rel="alternate" hreflang="fr" href="https://jericrealubit.github.io/goodlist/fr/">
+<link rel="alternate" hreflang="pt-BR" href="https://jericrealubit.github.io/goodlist/pt-br/">
+<link rel="alternate" hreflang="ru" href="https://jericrealubit.github.io/goodlist/ru/">
+<link rel="alternate" hreflang="id" href="https://jericrealubit.github.io/goodlist/id/">
+<link rel="alternate" hreflang="de" href="https://jericrealubit.github.io/goodlist/de/">
+<link rel="alternate" hreflang="ja" href="https://jericrealubit.github.io/goodlist/ja/">
+<link rel="alternate" hreflang="fil" href="https://jericrealubit.github.io/goodlist/fil/">
+<link rel="alternate" hreflang="x-default" href="https://jericrealubit.github.io/goodlist/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Goodlist">
+<meta property="og:title" content="Goodlist：待办任务、闹钟和服药提醒">
+<meta property="og:description" content="服药提醒、待办清单、家庭任务共享，还有在你回应前一直响的闹钟。">
+<meta property="og:url" content="https://jericrealubit.github.io/goodlist/zh-hans/">
+<meta property="og:image" content="https://jericrealubit.github.io/goodlist/assets/og-image.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="500">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="hi_IN">
+<meta property="og:locale:alternate" content="es_LA">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="id_ID">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="tl_PH">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Goodlist","alternateName":"Goodlist：待办任务、闹钟和服药提醒","description":"服药提醒、待办清单、家庭任务共享，还有在你回应前一直响的闹钟。","url":"https://jericrealubit.github.io/goodlist/zh-hans/","inLanguage":"zh-Hans","operatingSystem":"Android","applicationCategory":"ProductivityApplication","downloadUrl":"https://play.google.com/store/apps/details?id=com.goodlist.app&hl=zh_CN","image":"https://jericrealubit.github.io/goodlist/assets/og-image.png","screenshot":["https://jericrealubit.github.io/goodlist/play-store/listings/zh-CN/images/phoneScreenshots/01-todo-list.png","https://jericrealubit.github.io/goodlist/play-store/listings/zh-CN/images/phoneScreenshots/02-alarms.png","https://jericrealubit.github.io/goodlist/play-store/listings/zh-CN/images/phoneScreenshots/03-medicines.png","https://jericrealubit.github.io/goodlist/play-store/listings/zh-CN/images/phoneScreenshots/04-voice.png","https://jericrealubit.github.io/goodlist/play-store/listings/zh-CN/images/phoneScreenshots/05-calendar.png","https://jericrealubit.github.io/goodlist/play-store/listings/zh-CN/images/phoneScreenshots/06-repeating-tasks.png","https://jericrealubit.github.io/goodlist/play-store/listings/zh-CN/images/phoneScreenshots/07-groups.png","https://jericrealubit.github.io/goodlist/play-store/listings/zh-CN/images/phoneScreenshots/08-themes.png"],"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #fbfbfa;
+    --surface: #ffffff;
+    --sunk: #f1f3f6;
+    --text: #14181f;
+    --muted: #5b6472;
+    --border: #e2e5ea;
+    --brand: #072655;
+    --brand-ink: #072655;
+    --accent: #2e9e4f;
+    --danger: #b23a2c;
+    --danger-bg: #fdf3f1;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0b0f17;
+      --surface: #111826;
+      --sunk: #0e1420;
+      --text: #e7e9ed;
+      --muted: #9aa3b2;
+      --border: #262b36;
+      --brand: #5c8ae6;
+      --brand-ink: #e7e9ed;
+      --accent: #4cb86b;
+      --danger: #e4685d;
+      --danger-bg: #21150f;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--brand); }
+  a:focus-visible, summary:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 3px;
+  }
+
+  header.top {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: color-mix(in srgb, var(--bg) 92%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+  }
+  .top-inner {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-inline-end: auto;
+    text-decoration: none;
+    color: inherit;
+  }
+  .mark {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    background: #072655;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+  }
+  .mark svg { width: 17px; height: 17px; }
+  .brand b { font-size: 15px; letter-spacing: -0.01em; }
+  nav.docs { display: flex; gap: 4px; flex-wrap: wrap; }
+  nav.docs a {
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--muted);
+    padding: 6px 12px;
+    border-radius: 999px;
+  }
+  nav.docs a:hover { color: var(--text); background: var(--sunk); }
+  nav.docs a[aria-current="page"] { color: var(--brand-ink); background: var(--sunk); }
+
+  main { max-width: 940px; margin: 0 auto; padding: 40px 20px 80px; }
+
+  .hero { margin-bottom: 36px; }
+  .hero h1 {
+    font-size: clamp(28px, 5vw, 36px);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin: 0 0 8px;
+  }
+  .hero p { margin: 0 0 14px; color: var(--muted); max-width: 60ch; }
+  .stamp {
+    display: inline-block;
+    font-size: 13px;
+    color: var(--muted);
+    background: var(--sunk);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 4px 12px;
+  }
+  .stamp b { color: var(--text); }
+
+  .layout { display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: 44px; align-items: start; }
+
+  .toc { position: sticky; top: 76px; display: flex; flex-direction: column; }
+  .toc-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+  .toc a {
+    font-size: 13.5px;
+    line-height: 1.4;
+    color: var(--muted);
+    text-decoration: none;
+    padding: 5px 0 5px 12px;
+    border-left: 2px solid var(--border);
+  }
+  .toc a:hover { color: var(--text); border-left-color: var(--accent); }
+  /* After the .toc rules above, not before them: at equal specificity the
+     later declaration wins, so hoisting this to the .layout block left the
+     sidebar visible on phones. */
+  @media (max-width: 760px) {
+    .layout { grid-template-columns: 1fr; gap: 0; }
+    .toc { display: none; }
+  }
+
+  article { max-width: 68ch; }
+  section { scroll-margin-top: 84px; }
+  section + section { margin-top: 40px; padding-top: 32px; border-top: 1px solid var(--border); }
+  h2 { font-size: 20px; letter-spacing: -0.01em; margin: 0 0 10px; }
+  h2 .num { color: var(--muted); font-weight: 500; margin-right: 8px; }
+  p { margin: 12px 0; }
+  p.lead { color: var(--muted); font-size: 15px; }
+  ul { margin: 12px 0; padding-inline-start: 22px; }
+  li { margin: 6px 0; }
+  strong { font-weight: 650; }
+
+  .callout {
+    margin: 16px 0;
+    padding: 14px 16px;
+    font-size: 15px;
+    background: var(--sunk);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--brand);
+    border-radius: 10px;
+  }
+  .callout.warn { background: var(--danger-bg); border-left-color: var(--danger); }
+
+  .cards { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin-top: 28px; }
+  .card {
+    display: block;
+    padding: 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    text-decoration: none;
+    color: inherit;
+  }
+  .card:hover { border-color: var(--accent); }
+  .card b { display: block; font-size: 16px; margin-bottom: 6px; }
+  .card span { color: var(--muted); font-size: 14px; }
+
+  footer {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 24px 20px 60px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  .landing .hero { margin-bottom: 28px; }
+  .landing .hero h1 { max-width: 22ch; }
+  .hero-lede { font-size: 18px; line-height: 1.5; max-width: 52ch; }
+  .landing .hero p.hero-lede { color: var(--text); }
+  .cta { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 22px; margin: 22px 0 12px; }
+  .play-badge { display: inline-block; line-height: 0; border-radius: 10px; }
+  .play-badge img { height: 60px; width: auto; }
+  .play-button {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 12px;
+    background: #000;
+    color: #fff;
+    font-weight: 650;
+    text-decoration: none;
+  }
+  .play-button:hover { background: #222; }
+  .web-link { font-weight: 600; }
+  .landing .hero p.note { font-size: 14px; max-width: 62ch; }
+
+  .shots {
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    list-style: none;
+    margin: 0;
+    padding: 4px 2px 16px;
+  }
+  .shots li { flex: 0 0 auto; margin: 0; scroll-snap-align: start; }
+  .shots img {
+    display: block;
+    width: 200px;
+    height: auto;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    background: var(--sunk);
+  }
+  @media (min-width: 760px) { .shots img { width: 216px; } }
+
+  .landing section > p, .landing section > details { max-width: 70ch; }
+  .features { columns: 2 300px; column-gap: 36px; }
+  .features li { break-inside: avoid; }
+  details.faq { border-bottom: 1px solid var(--border); padding: 12px 0; }
+  details.faq summary { cursor: pointer; font-weight: 650; }
+  details.faq p { margin: 8px 0 4px; color: var(--muted); }
+
+  .langs ul { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; }
+  .langs li { margin: 0; }
+  .langs a {
+    display: inline-block;
+    padding: 6px 14px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    font-size: 14px;
+    text-decoration: none;
+  }
+  .langs a:hover { border-color: var(--accent); }
+  .langs a[aria-current="page"] { background: var(--sunk); color: var(--text); }
+  footer p { margin: 6px 0 0; font-size: 12px; }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-inner">
+    <a class="brand" href="/goodlist/zh-hans/">
+      <span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" fill="#fff" fill-opacity=".14"/><path d="M7 12.5l3 3 7-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <b>Goodlist</b>
+    </a>
+    <nav class="docs" aria-label="Main">
+        <a href="/goodlist/guide/">指南</a>
+        <a href="/goodlist/legal/privacy/">隐私</a>
+        <a href="/goodlist/legal/terms/">条款</a>
+        <a href="/goodlist/legal/delete-account/">删除账号</a>
+    </nav>
+  </div>
+</header>
+<main class="landing">
+  <div class="hero">
+    <h1>Goodlist：待办任务、闹钟和服药提醒</h1>
+    <p class="hero-lede">服药提醒、待办清单、家庭任务共享，还有在你回应前一直响的闹钟。</p>
+    <div class="cta">
+      <a class="play-button" href="https://play.google.com/store/apps/details?id=com.goodlist.app&amp;hl=zh_CN&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dlanding%26utm_campaign%3Dzhhans_landing">在 Google Play 上获取</a>
+      <a class="web-link" href="https://goodlist.expo.app">在浏览器中使用</a>
+    </div>
+    <p class="note">适用于 Android 手机。在 iPhone 或电脑上，可用同一账号访问 goodlist.expo.app 使用网页版。闹钟和提醒需要 Android 应用。</p>
+  </div>
+
+  <section aria-labelledby="screenshots">
+    <h2 id="screenshots">屏幕截图</h2>
+    <ul class="shots">
+      <li><img src="/goodlist/play-store/listings/zh-CN/images/phoneScreenshots/01-todo-list.png" alt="你的待办，简单清楚. 几秒钟添加一项任务。完成后向右滑动。" width="1080" height="1920" decoding="async"></li>
+      <li><img src="/goodlist/play-store/listings/zh-CN/images/phoneScreenshots/02-alarms.png" alt="直到你回应，闹钟才停. 关闭、稍后提醒，或标记完成。" width="1080" height="1920" decoding="async"></li>
+      <li><img src="/goodlist/play-store/listings/zh-CN/images/phoneScreenshots/03-medicines.png" alt="不再漏服任何一次. 每次服药都提醒。点一下就记录为已服用。" width="1080" height="1920" loading="lazy" decoding="async"></li>
+      <li><img src="/goodlist/play-store/listings/zh-CN/images/phoneScreenshots/04-voice.png" alt="说出来就行. 用你的语言说，马上变成任务。" width="1080" height="1920" loading="lazy" decoding="async"></li>
+      <li><img src="/goodlist/play-store/listings/zh-CN/images/phoneScreenshots/05-calendar.png" alt="何时做什么，一目了然. 有任务的日子都有标记。点两下就能改日期。" width="1080" height="1920" loading="lazy" decoding="async"></li>
+      <li><img src="/goodlist/play-store/listings/zh-CN/images/phoneScreenshots/06-repeating-tasks.png" alt="设置一次，自动重复. 每天、每周、每月，或你选择的日子。" width="1080" height="1920" loading="lazy" decoding="async"></li>
+      <li><img src="/goodlist/play-store/listings/zh-CN/images/phoneScreenshots/07-groups.png" alt="和家人或团队共享任务. 用邀请码邀请。每个请求都显示是谁提的。" width="1080" height="1920" loading="lazy" decoding="async"></li>
+      <li><img src="/goodlist/play-store/listings/zh-CN/images/phoneScreenshots/08-themes.png" alt="随你喜欢. 32 种主题，每种都有会动的吉祥物。" width="1080" height="1920" loading="lazy" decoding="async"></li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="about">
+    <h2 id="about">功能介绍</h2>
+    <p>Goodlist 是一款个人待办清单：闹钟会一直响到你回应，服药提醒帮你不漏服任何一次。上手简单，随你的需要扩展，支持 12 种语言。</p>
+    <p>注册后几秒钟就能开始添加任务——不用建群组，也不用设置。你创建的每个任务默认只有你自己能看到。</p>
+    <p>输入任务，或点按麦克风用你的语言说出来：你说的话就成为任务内容。保存前你会先看到识别出的文字，而且绝不会录音——语音由你的手机转成文字，Goodlist 只收到文字。用英语说时，还能理解日期和“remind me tomorrow”这样的指令。</p>
+    <p>给任务设一个日期，它就会出现在日历上。打开它的闹钟，手机会准时响起，并一直响到你点按“关闭”“稍后提醒”或“完成”。</p>
+    <p>添加药品后，Goodlist 会在每次该服药时提醒你，直到你回应。如有需要，还可以按日子设不同时间——比如工作日 4:10、周末 9:00。一键记录每次已服用或跳过，一周的服药情况一目了然。这是提醒和记录工具，不提供医疗建议。</p>
+    <p>不用看屏幕也能分辨是吃药还是做事：服药提醒和任务闹钟的铃声不同。在设置中分别选择——嘀嘀声、叮咚、闹铃或渐升音——还能先试听。</p>
+    <p>Goodlist 说你的语言：English、Español、Português、Français、Deutsch、Русский、العربية、हिन्दी、Bahasa Indonesia、Filipino、日本語 和 简体中文。默认跟随手机语言，也可以在设置中另选。在阿拉伯语下，每个界面都从右向左显示。</p>
+    <p>准备好了，就用邀请码创建或加入群组（家庭或团队），互相请求任务，并附上请求人的名字，谁请谁做了什么一清二楚。用 iPhone 或电脑的家人可以在 goodlist.expo.app 加入。你的个人任务保持原样。</p>
+  </section>
+
+  <section aria-labelledby="features">
+    <h2 id="features">功能</h2>
+    <ul class="features">
+      <li>带备注、截止日期和日历视图的个人任务</li>
+      <li>点按两下就能把任务移到另一天</li>
+      <li>重复任务——每天、每周、每两周、每月，或你选择的日子</li>
+      <li>任意任务都可设闹钟，在截止时间准时响起</li>
+      <li>闹钟会一直响到你回应；没有回应时每 5 分钟再响一次</li>
+      <li>可选择稍后提醒的时长：5、10、15 或 30 分钟</li>
+      <li>药品和任务使用不同铃声</li>
+      <li>如果手机设置可能让闹钟不响，日历会提醒你</li>
+      <li>静音模式——让闹钟静音 1 小时、8 小时、到明天早上，或到你选择的时间</li>
+      <li>每次服药都有提醒，可直接在通知里点按“已服用”或“稍后提醒”</li>
+      <li>每次服药的记录，以及一周的服药情况</li>
+      <li>与群组共享药品，让家人也能看到服药安排</li>
+      <li>32 种主题——浅色、深色或鲜艳，每种都有会动的吉祥物（其中 3 种需 Premium）</li>
+      <li>支持离线使用，重新联网后自动同步</li>
+      <li>所有已完成任务的历史记录</li>
+      <li>在你的所有设备上实时更新</li>
+      <li>随时在设置中删除你的账号和全部数据</li>
+      <li>也可以在网页上使用：goodlist.expo.app，同一个账号（闹钟和服药提醒仅限手机，浏览器无法设定定时提醒）</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="pricing">
+    <h2 id="pricing">价格与隐私</h2>
+    <p>Goodlist 免费使用。可选的 Premium（按月、按年或一次性买断的终身方案）让你可以拥有第二个自己的群组、与群组共享药品，或让群组成员超过 5 人（最多 20 人）。第一次创建第二个群组或共享药品时，会开始 30 天免费试用，无需绑卡。你也可以打赏支持应用，会获得“支持者”徽章，但不会解锁任何功能。</p>
+    <p>Goodlist 不显示广告，不会为广告追踪你，也不会出售你的数据。详情请见我们的隐私政策（英文）。</p>
+  </section>
+
+  <section aria-labelledby="faq">
+    <h2 id="faq">常见问题</h2>
+    <details class="faq">
+      <summary>Goodlist 免费吗？</summary>
+      <p>免费。你自己的任务、闹钟、服药提醒，以及一个最多 5 人的群组都免费，而且没有广告。Premium 是可选的：可以拥有第二个群组、与群组共享药品，群组最多 20 人。创建第二个群组或第一次共享药品时，会开始 30 天免费试用，无需绑卡。</p>
+    </details>
+    <details class="faq">
+      <summary>有 iPhone 版吗？</summary>
+      <p>暂时没有。使用 iPhone 或电脑的家人和同事，可以用同一账号在 goodlist.expo.app 使用 Goodlist：加入你的群组，查看和发送任务。闹钟和服药提醒需要 Android 应用，因为浏览器无法定时提醒。</p>
+    </details>
+    <details class="faq">
+      <summary>闹钟没响怎么办？</summary>
+      <p>先在设置中确认静音模式已关闭。然后打开日历：如果手机的某项设置会阻止闹钟，顶部会显示提示，并附有修复按钮。Goodlist 需要通知权限，在 Android 上还需要开启“闹钟和提醒”。有些手机为了省电会停止后台应用；如果你的手机是这样，请允许 Goodlist 不受电池限制地运行。</p>
+    </details>
+    <details class="faq">
+      <summary>怎样和家人共享任务？</summary>
+      <p>在群组标签页创建一个群组（家庭或团队），然后点击群组卡片上的“分享”发送邀请。他们加入后，你们就可以互相发送请求任务，每个任务都写着是谁提出的。你的个人任务仍然保密。</p>
+    </details>
+    <details class="faq">
+      <summary>我的数据会怎样？</summary>
+      <p>Goodlist 不显示广告，不为广告追踪你，也不出售你的数据。你可以随时在设置中删除账号和所有数据。详情请见隐私政策（英文）。</p>
+    </details>
+  </section>
+
+  <section aria-labelledby="help">
+    <h2 id="help">帮助与法律信息</h2>
+    <div class="cards">
+      <a class="card" href="/goodlist/guide/"><b>如何使用 Goodlist</b><span>分步讲解，每一步都配有图片（英文）。</span></a>
+      <a class="card" href="/goodlist/legal/"><b>法律与隐私</b><span>隐私政策、服务条款，以及如何删除账号（英文）。</span></a>
+    </div>
+  </section>
+
+  <section class="langs" aria-labelledby="languages">
+    <h2 id="languages">语言</h2>
+    <ul>
+      <li><a href="/goodlist/" hreflang="en" lang="en">English</a></li>
+      <li><a href="/goodlist/zh-hans/" hreflang="zh-Hans" lang="zh-Hans" aria-current="page">简体中文</a></li>
+      <li><a href="/goodlist/hi/" hreflang="hi" lang="hi">हिन्दी</a></li>
+      <li><a href="/goodlist/es/" hreflang="es" lang="es">Español</a></li>
+      <li><a href="/goodlist/ar/" hreflang="ar" lang="ar">العربية</a></li>
+      <li><a href="/goodlist/fr/" hreflang="fr" lang="fr">Français</a></li>
+      <li><a href="/goodlist/pt-br/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a></li>
+      <li><a href="/goodlist/ru/" hreflang="ru" lang="ru">Русский</a></li>
+      <li><a href="/goodlist/id/" hreflang="id" lang="id">Bahasa Indonesia</a></li>
+      <li><a href="/goodlist/de/" hreflang="de" lang="de">Deutsch</a></li>
+      <li><a href="/goodlist/ja/" hreflang="ja" lang="ja">日本語</a></li>
+      <li><a href="/goodlist/fil/" hreflang="fil" lang="fil">Filipino</a></li>
+    </ul>
+  </section>
+</main>
+<footer>
+  Goodlist — 有问题？ <a href="mailto:jericrealubit@gmail.com">jericrealubit@gmail.com</a>
+  <p lang="en">Google Play is a trademark of Google LLC.</p>
+</footer>
+</body>
+</html>
