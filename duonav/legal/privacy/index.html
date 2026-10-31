@@ -57,7 +57,7 @@ footer { max-width: 820px; margin: 0 auto; padding: 0 16px 32px; color: var(--mu
   <main>
     <article>
 <h1>duoNav privacy policy</h1>
-<p><strong>Effective date:</strong> 22 October 2026</p>
+<p><strong>Effective date:</strong> 31 October 2026</p>
 <p>duoNav is a map and turn-by-turn navigation app for Android, made by <strong>Jeric Realubit</strong> (&quot;we&quot;). This policy says what duoNav does with your information. It covers the duoNav app, including the test builds shared before its first release. The short version: there's no account, no ads and no tracking, and almost everything stays on your phone.</p>
 <nav class="toc" aria-label="On this page"><ol><li><a href="#what-stays-on-your-phone">What stays on your phone</a></li><li><a href="#your-location">Your location</a></li><li><a href="#your-voice">Your voice</a></li><li><a href="#what-leaves-your-phone-and-why">What leaves your phone, and why</a></li><li><a href="#what-we-dont-do">What we don't do</a></li><li><a href="#children">Children</a></li><li><a href="#your-choices-and-rights">Your choices and rights</a></li><li><a href="#changes">Changes</a></li><li><a href="#contact">Contact</a></li></ol></nav>
 <h2 id="what-stays-on-your-phone">What stays on your phone</h2>
@@ -69,6 +69,7 @@ footer { max-width: 820px; margin: 0 auto; padding: 0 16px 32px; color: var(--mu
   <li><strong>Settings</strong>, such as voice, units, map look and <em>Offline only</em>.</li>
   <li><strong>Downloaded areas</strong>: maps, routing data and search data for the regions you download.</li>
 </ul>
+<p>Links and text you open or share with duoNav from another app (<em>Open in duoNav</em>) are read on your phone to find the place, and not kept. Only a Google Maps short link is sent anywhere: to Google, as described below.</p>
 <p>duoNav turns off Android's app backup, so none of this goes to your Google account backup. Deleting duoNav, or clearing its storage in Android Settings, deletes all of it. <em>Forget</em> in Settings › Your car removes the saved car location straight away.</p>
 <h2 id="your-location">Your location</h2>
 <p>duoNav asks for location <strong>only while you're using it</strong>. It uses your location to show where you are, to plan routes from where you are, and to guide you.</p>
@@ -87,6 +88,7 @@ footer { max-width: 820px; margin: 0 auto; padding: 0 16px 32px; color: var(--mu
 <tr><td><strong>Stadia Maps</strong> (the map)</td><td>Whenever the map shows an area you haven't downloaded, and when you download or update an area</td><td>Which map pieces your phone asks for, which shows roughly which area is on screen, and your IP address.</td></tr>
 <tr><td><strong>Protomaps</strong> and <strong>GitHub</strong> (map files for testing)</td><td>Only in test builds without a Stadia key, and when you load a map file in the test screens</td><td>The same: which map pieces, and your IP address. If duoNav moves its maps to its own hosting, this table will name it first.</td></tr>
 <tr><td><strong>duoNav's assistant server</strong> (on Cloudflare) and <strong>Anthropic</strong> (the Claude AI model behind the voice assistant)</td><td>When you talk to the assistant and it can't answer on the phone, and for its occasional check-ins on a drive, unless <em>Offline only</em> is on or Settings › Assistant is <em>Off</em></td><td>The text of what you said (not the recording), the assistant's earlier replies in that conversation, and the trip's context: which screen you're on, the local time, your first name if you set one, the destination's name, the distance and time left and the next turn's street. Names, streets and distances of places it found for you. <strong>Never your location or coordinates.</strong> Your IP address. Our server doesn't log any of it; it only counts requests per IP address for a minute to limit abuse.</td></tr>
+<tr><td><strong>Google</strong> (Google Maps short links)</td><td>When you open or share a Google Maps short link (such as maps.app.goo.gl/…) with duoNav, unless <em>Offline only</em> is on</td><td>That link, so duoNav can learn which place it points to, and your IP address. <strong>Not your location.</strong></td></tr>
 <tr><td><strong>OpenStreetMap Overpass API</strong> (gas and ATMs along the way)</td><td>When you open <em>Gas or ATM along the way</em> while navigating with signal</td><td>Points about a kilometre apart along the route ahead of you (so, roughly where you are and where you're going), whether you asked for gas or ATMs, and your IP address.</td></tr>
 <tr><td><strong>Expo</strong> (app updates)</td><td>When duoNav starts, to check for an update</td><td>The app's version and platform details and your IP address. No location.</td></tr>
 <tr><td><strong>Google Play</strong></td><td>When you install or update the app</td><td>Handled by Google under Google's own privacy policy.</td></tr>
