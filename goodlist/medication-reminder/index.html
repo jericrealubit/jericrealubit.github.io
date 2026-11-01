@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Medication reminder that rings until you answer — Goodlist</title>
+<meta name="description" content="Medicine reminders for Android with any number of medicines on the free plan, reminders that keep ringing until you answer, and a record of every dose.">
+<meta name="robots" content="index, follow">
+<link rel="icon" type="image/png" href="/goodlist/assets/favicon.png">
+<link rel="canonical" href="https://jericrealubit.github.io/goodlist/medication-reminder/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Goodlist">
+<meta property="og:title" content="Medication reminder that rings until you answer — Goodlist">
+<meta property="og:description" content="Medicine reminders for Android with any number of medicines on the free plan, reminders that keep ringing until you answer, and a record of every dose.">
+<meta property="og:url" content="https://jericrealubit.github.io/goodlist/medication-reminder/">
+<meta property="og:image" content="https://jericrealubit.github.io/goodlist/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Goodlist","description":"Medicine reminders for Android with any number of medicines on the free plan, reminders that keep ringing until you answer, and a record of every dose.","url":"https://jericrealubit.github.io/goodlist/medication-reminder/","inLanguage":"en","operatingSystem":"Android","applicationCategory":"HealthApplication","downloadUrl":"https://play.google.com/store/apps/details?id=com.goodlist.app&hl=en&referrer=utm_source%3Dwebsite%26utm_medium%3Dlanding%26utm_campaign%3Dmedication_page","image":"https://jericrealubit.github.io/goodlist/assets/og-image.png","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Are medicine reminders free?","acceptedAnswer":{"@type":"Answer","text":"Yes. Reminders, any number of medicines and the record of every dose are free, with no ads. Premium adds extras such as sharing a medicine with family and a printable medicine record."}},{"@type":"Question","name":"Does it work on an iPhone?","acceptedAnswer":{"@type":"Answer","text":"Reminders ring in the Android app. Family on an iPhone or a computer can use Goodlist at goodlist.expo.app with their own account to see a medicine you share with them."}},{"@type":"Question","name":"Who can see my medicines?","acceptedAnswer":{"@type":"Answer","text":"Only you, unless you choose to share a medicine with a group. Goodlist doesn’t show ads, doesn’t track you for advertising and doesn’t sell your data, and you can delete your account at any time."}}]}</script>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #fbfbfa;
+    --surface: #ffffff;
+    --sunk: #f1f3f6;
+    --text: #14181f;
+    --muted: #5b6472;
+    --border: #e2e5ea;
+    --brand: #072655;
+    --brand-ink: #072655;
+    --accent: #2e9e4f;
+    --danger: #b23a2c;
+    --danger-bg: #fdf3f1;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0b0f17;
+      --surface: #111826;
+      --sunk: #0e1420;
+      --text: #e7e9ed;
+      --muted: #9aa3b2;
+      --border: #262b36;
+      --brand: #5c8ae6;
+      --brand-ink: #e7e9ed;
+      --accent: #4cb86b;
+      --danger: #e4685d;
+      --danger-bg: #21150f;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--brand); }
+  a:focus-visible, summary:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 3px;
+  }
+
+  header.top {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: color-mix(in srgb, var(--bg) 92%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+  }
+  .top-inner {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-inline-end: auto;
+    text-decoration: none;
+    color: inherit;
+  }
+  .mark {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    background: #072655;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+  }
+  .mark svg { width: 17px; height: 17px; }
+  .brand b { font-size: 15px; letter-spacing: -0.01em; }
+  nav.docs { display: flex; gap: 4px; flex-wrap: wrap; }
+  nav.docs a {
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--muted);
+    padding: 6px 12px;
+    border-radius: 999px;
+  }
+  nav.docs a:hover { color: var(--text); background: var(--sunk); }
+  nav.docs a[aria-current="page"] { color: var(--brand-ink); background: var(--sunk); }
+
+  main { max-width: 940px; margin: 0 auto; padding: 40px 20px 80px; }
+
+  .hero { margin-bottom: 36px; }
+  .hero h1 {
+    font-size: clamp(28px, 5vw, 36px);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin: 0 0 8px;
+  }
+  .hero p { margin: 0 0 14px; color: var(--muted); max-width: 60ch; }
+  .stamp {
+    display: inline-block;
+    font-size: 13px;
+    color: var(--muted);
+    background: var(--sunk);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 4px 12px;
+  }
+  .stamp b { color: var(--text); }
+
+  .layout { display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: 44px; align-items: start; }
+
+  .toc { position: sticky; top: 76px; display: flex; flex-direction: column; }
+  .toc-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+  .toc a {
+    font-size: 13.5px;
+    line-height: 1.4;
+    color: var(--muted);
+    text-decoration: none;
+    padding: 5px 0 5px 12px;
+    border-left: 2px solid var(--border);
+  }
+  .toc a:hover { color: var(--text); border-left-color: var(--accent); }
+  /* After the .toc rules above, not before them: at equal specificity the
+     later declaration wins, so hoisting this to the .layout block left the
+     sidebar visible on phones. */
+  @media (max-width: 760px) {
+    .layout { grid-template-columns: 1fr; gap: 0; }
+    .toc { display: none; }
+  }
+
+  article { max-width: 68ch; }
+  section { scroll-margin-top: 84px; }
+  section + section { margin-top: 40px; padding-top: 32px; border-top: 1px solid var(--border); }
+  h2 { font-size: 20px; letter-spacing: -0.01em; margin: 0 0 10px; }
+  h2 .num { color: var(--muted); font-weight: 500; margin-right: 8px; }
+  p { margin: 12px 0; }
+  p.lead { color: var(--muted); font-size: 15px; }
+  ul { margin: 12px 0; padding-inline-start: 22px; }
+  li { margin: 6px 0; }
+  strong { font-weight: 650; }
+
+  .callout {
+    margin: 16px 0;
+    padding: 14px 16px;
+    font-size: 15px;
+    background: var(--sunk);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--brand);
+    border-radius: 10px;
+  }
+  .callout.warn { background: var(--danger-bg); border-left-color: var(--danger); }
+
+  .cards { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin-top: 28px; }
+  .card {
+    display: block;
+    padding: 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    text-decoration: none;
+    color: inherit;
+  }
+  .card:hover { border-color: var(--accent); }
+  .card b { display: block; font-size: 16px; margin-bottom: 6px; }
+  .card span { color: var(--muted); font-size: 14px; }
+
+  footer {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 24px 20px 60px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  .landing .hero { margin-bottom: 28px; }
+  .landing .hero h1 { max-width: 22ch; }
+  .hero-lede { font-size: 18px; line-height: 1.5; max-width: 52ch; }
+  .landing .hero p.hero-lede { color: var(--text); }
+  .cta { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 22px; margin: 22px 0 12px; }
+  .play-badge { display: inline-block; line-height: 0; border-radius: 10px; }
+  .play-badge img { height: 60px; width: auto; }
+  .play-button {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 12px;
+    background: #000;
+    color: #fff;
+    font-weight: 650;
+    text-decoration: none;
+  }
+  .play-button:hover { background: #222; }
+  .web-link { font-weight: 600; }
+  .landing .hero p.note { font-size: 14px; max-width: 62ch; }
+
+  .shots {
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    list-style: none;
+    margin: 0;
+    padding: 4px 2px 16px;
+  }
+  .shots li { flex: 0 0 auto; margin: 0; scroll-snap-align: start; }
+  .shots img {
+    display: block;
+    width: 200px;
+    height: auto;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    background: var(--sunk);
+  }
+  @media (min-width: 760px) { .shots img { width: 216px; } }
+
+  .landing section > p, .landing section > details { max-width: 70ch; }
+  .features { columns: 2 300px; column-gap: 36px; }
+  .features li { break-inside: avoid; }
+  details.faq { border-bottom: 1px solid var(--border); padding: 12px 0; }
+  details.faq summary { cursor: pointer; font-weight: 650; }
+  details.faq p { margin: 8px 0 4px; color: var(--muted); }
+
+  .langs ul { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; }
+  .langs li { margin: 0; }
+  .langs a {
+    display: inline-block;
+    padding: 6px 14px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    font-size: 14px;
+    text-decoration: none;
+  }
+  .langs a:hover { border-color: var(--accent); }
+  .langs a[aria-current="page"] { background: var(--sunk); color: var(--text); }
+  footer p { margin: 6px 0 0; font-size: 12px; }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-inner">
+    <a class="brand" href="/goodlist/">
+      <span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" fill="#fff" fill-opacity=".14"/><path d="M7 12.5l3 3 7-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <b>Goodlist</b>
+    </a>
+    <nav class="docs" aria-label="Main">
+        <a href="/goodlist/guide/">Guide</a>
+        <a href="/goodlist/legal/privacy/">Privacy</a>
+    </nav>
+  </div>
+</header>
+<main class="landing">
+  <div class="hero">
+    <h1>A medication reminder that keeps ringing until you answer</h1>
+    <p class="hero-lede">Goodlist reminds you at the times you set for each medicine — as many medicines as you take, on the free plan — and keeps ringing until you answer it.</p>
+    <div class="cta">
+      <a class="play-button" href="https://play.google.com/store/apps/details?id=com.goodlist.app&amp;hl=en&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dlanding%26utm_campaign%3Dmedication_page">Get it on Google Play</a>
+      <a class="web-link" href="/goodlist/">See everything Goodlist does</a>
+    </div>
+    <p class="note">For Android phones. On an iPhone or a computer, use the web app at goodlist.expo.app with the same account. Alarms and reminders need the Android app.</p>
+  </div>
+
+  <ul class="shots">
+      <li><img src="/goodlist/play-store/screenshots/03-medicines.png" alt="Medicine reminders in Goodlist: today's doses with Taken and Skip" width="1080" height="1920" decoding="async"></li>
+  </ul>
+
+  <section>
+    <h2>Free, with no limit on medicines</h2>
+    <ul class="features">
+      <li>Any number of medicines, each with its own times and dose</li>
+      <li>Every day, some days, or different times on different days</li>
+      <li>Reminders that ring until you answer, even with the phone locked</li>
+      <li>Taken or Snooze straight from the notification, Skip in the app</li>
+      <li>A record of every dose, and how many you took this week</li>
+      <li>Your to-do list and alarms in the same app, with no ads</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>For family and carers</h2>
+    <p>Share a medicine with a family group and they see each dose as taken, skipped or missed — useful when you help a parent from another town or another country. If a shared dose still isn’t logged an hour after its time, the group gets an alert.</p>
+    <p>Sharing is part of Premium. Every new account starts with 30 days of it, with no card needed and nothing charged when it ends. A group of up to 5 people is free.</p>
+  </section>
+
+  <section>
+    <h2>Set it up in a minute</h2>
+    <ol class="features">
+      <li>Install Goodlist from Google Play and continue with Google.</li>
+      <li>Open Meds, tap +, and add the medicine with its times.</li>
+      <li>Allow notifications, and Android’s “Alarms &amp; reminders”, so it rings on the minute.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Good to know</h2>
+    <p>Goodlist reminds you at the times you choose; it doesn’t give medical advice. Take your medicines as your doctor or pharmacist tells you.</p>
+    <p>Some phones stop apps in the background to save battery. If a reminder doesn’t ring, Settings → Help → Alarm check shows the steps for your phone.</p>
+  </section>
+
+  <section aria-labelledby="faq">
+    <h2 id="faq">Questions</h2>
+    <details class="faq">
+      <summary>Are medicine reminders free?</summary>
+      <p>Yes. Reminders, any number of medicines and the record of every dose are free, with no ads. Premium adds extras such as sharing a medicine with family and a printable medicine record.</p>
+    </details>
+    <details class="faq">
+      <summary>Does it work on an iPhone?</summary>
+      <p>Reminders ring in the Android app. Family on an iPhone or a computer can use Goodlist at goodlist.expo.app with their own account to see a medicine you share with them.</p>
+    </details>
+    <details class="faq">
+      <summary>Who can see my medicines?</summary>
+      <p>Only you, unless you choose to share a medicine with a group. Goodlist doesn’t show ads, doesn’t track you for advertising and doesn’t sell your data, and you can delete your account at any time.</p>
+    </details>
+  </section>
+</main>
+<footer>
+  Goodlist — questions? <a href="mailto:jericrealubit@gmail.com">jericrealubit@gmail.com</a>
+</footer>
+</body>
+</html>
